@@ -1,0 +1,5 @@
+*.classpath
+*.log
+/*.log
+*.txt
+**/logs
