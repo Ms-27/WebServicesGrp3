@@ -36,7 +36,7 @@ public class RunnerSoapUI_parameteredTest {
 	@Parameters(name = "{0}")
 	public static Collection<String[]> getTestCases() throws XmlException, IOException, SoapUIException {
 		final ArrayList<String[]> testCases = new ArrayList<String[]>();
-		WsdlProject project = new WsdlProject("src/test/resources/NOAA2-soapui-project.xml");
+		WsdlProject project = new WsdlProject("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
 		List<TestSuite> testSuites = project.getTestSuiteList();
 		for (TestSuite suite : testSuites) {
 			List<TestCase> lTestCases = suite.getTestCaseList();
@@ -59,7 +59,7 @@ public class RunnerSoapUI_parameteredTest {
 
 	public static boolean runSoapUITestCase(String testCase) throws XmlException, IOException, SoapUIException {
 		TestRunner.Status exitValue = TestRunner.Status.INITIALIZED;
-		WsdlProject soapuiProject = new WsdlProject("src/test/resources/NOAA2-soapui-project.xml");
+		WsdlProject soapuiProject = new WsdlProject("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
 		List<TestSuite> testSuites = soapuiProject.getTestSuiteList();
 		for (TestSuite suite : testSuites) {
 			if (suite == null) {
