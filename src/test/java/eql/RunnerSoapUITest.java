@@ -21,13 +21,13 @@ public class RunnerSoapUITest {
 	//@Test
 	public void testRunner() throws Exception {
 		SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
-		runner.setProjectFile("src/test/resources/NOAA2-soapui-project.xml");
+		runner.setProjectFile("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
 		runner.run();
 	}
 
 	@Test
 	public void testTestCaseRunnerTest() throws Exception {
-		WsdlProject project = new WsdlProject("src/test/resources/NOAA2-soapui-project.xml");
+		WsdlProject project = new WsdlProject("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
 		List<TestSuite> testSuites = project.getTestSuiteList();
 		for (TestSuite suite : testSuites) {
 			List<TestCase> testCases = suite.getTestCaseList();
