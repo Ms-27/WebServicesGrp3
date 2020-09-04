@@ -50,7 +50,7 @@ public class RunnerSoapUI_parameteredTest {
 
 	}
 
-	@Test
+	//@Test
 	public void testSoapUITestCaseTest() throws XmlException, IOException, SoapUIException {
 		System.out.println("Nom du cas de test SoapUI : " + testCaseName);
 		assertTrue(true);
