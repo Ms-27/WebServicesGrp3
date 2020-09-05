@@ -24,11 +24,11 @@ import java.util.List;
 
 
 @RunWith(Parameterized.class)
-public class RunnerSoapUI_parameteredTest {
+public class RunnerSoapUI_parameteredTest2 {
 	private String testCaseName;
-	private static String soapuiProjectName = "src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml";
+	private static String soapuiProjectName = "src/test/resources/TMDB-Ready-REST-readyapi-project.xml";
 
-	public RunnerSoapUI_parameteredTest(String testCaseName) {
+	public RunnerSoapUI_parameteredTest2(String testCaseName) {
 		this.testCaseName = testCaseName;
 	}
 
@@ -84,3 +84,4 @@ public class RunnerSoapUI_parameteredTest {
 		}
 	}
 }
+
