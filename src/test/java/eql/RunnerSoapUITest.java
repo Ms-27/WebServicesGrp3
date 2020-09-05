@@ -17,7 +17,7 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class RunnerSoapUITest {
-	
+	// Méthode basique
 	//@Test
 	public void testRunner() throws Exception {
 		SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
@@ -25,6 +25,7 @@ public class RunnerSoapUITest {
 		runner.run();
 	}
 
+	// Méthode avancée
 	@Test
 	public void testTestCaseRunnerTest() throws Exception {
 		WsdlProject project = new WsdlProject("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
