@@ -26,7 +26,7 @@ import java.util.List;
 @RunWith(Parameterized.class)
 public class RunnerSoapUI_parameteredTest2 {
 	private String testCaseName;
-	private static String soapuiProjectName = "src/test/resources/TMDB-Ready-REST-readyapi-project.xml";
+	private static String soapuiProjectName = "src/test/resources/LogicalDocSoapUI.xml";
 
 	public RunnerSoapUI_parameteredTest2(String testCaseName) {
 		this.testCaseName = testCaseName;
