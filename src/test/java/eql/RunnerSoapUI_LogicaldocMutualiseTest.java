@@ -25,7 +25,7 @@ import com.eviware.soapui.support.SoapUIException;
 @RunWith(Parameterized.class)
 public class RunnerSoapUI_LogicaldocMutualiseTest {
 	private String testCaseName;
-	private static String soapuiProjectName = "src/test/resources/TMDB-Ready-REST-readyapi-project.xml";
+	private static String soapuiProjectName = "src/test/resources/LogicalDoc_API_test_TBB.xml";
 
 	public RunnerSoapUI_LogicaldocMutualiseTest(String testCaseName) {
 		this.testCaseName = testCaseName;
