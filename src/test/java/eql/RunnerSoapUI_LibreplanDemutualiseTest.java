@@ -22,22 +22,22 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * Unit test for simple App.
- */
-@RunWith(Parameterized.class)
-public class RunnerSoapUI_parameteredTest {
-	private String testCaseName;
 
-	public RunnerSoapUI_parameteredTest(String testCaseName) {
+@RunWith(Parameterized.class)
+public class RunnerSoapUI_LibreplanDemutualiseTest {
+	private String testCaseName;
+	private static String soapuiProjectName = "src/test/resources/Libreplan_API_test_unitaire.xml";
+
+	public RunnerSoapUI_LibreplanDemutualiseTest(String testCaseName) {
 		this.testCaseName = testCaseName;
 	}
 
 	@Parameters(name = "{0}")
 	public static Collection<String[]> getTestCases() throws XmlException, IOException, SoapUIException {
 		final ArrayList<String[]> testCases = new ArrayList<String[]>();
-		WsdlProject project = new WsdlProject("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
+		WsdlProject project = new WsdlProject(soapuiProjectName);
 		List<TestSuite> testSuites = project.getTestSuiteList();
+		
 		for (TestSuite suite : testSuites) {
 			List<TestCase> lTestCases = suite.getTestCaseList();
 			for (TestCase testCase : lTestCases) {
@@ -59,7 +59,7 @@ public class RunnerSoapUI_parameteredTest {
 
 	public static boolean runSoapUITestCase(String testCase) throws XmlException, IOException, SoapUIException {
 		TestRunner.Status exitValue = TestRunner.Status.INITIALIZED;
-		WsdlProject soapuiProject = new WsdlProject("src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml");
+		WsdlProject soapuiProject = new WsdlProject(soapuiProjectName);
 		List<TestSuite> testSuites = soapuiProject.getTestSuiteList();
 		for (TestSuite suite : testSuites) {
 			if (suite == null) {
@@ -84,3 +84,4 @@ public class RunnerSoapUI_parameteredTest {
 		}
 	}
 }
+
