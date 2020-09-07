@@ -26,7 +26,7 @@ import java.util.List;
 @RunWith(Parameterized.class)
 public class RunnerSoapUI_LibreplanMutualiseTest {
 	private String testCaseName;
-	private static String soapuiProjectName = "src/test/resources/Autom5-Projet2-Groupe3-libreplan-readyapi-project.xml";
+	private static String soapuiProjectName = "src/test/resources/Libreplan_API_test_TBB.xml";
 
 	public RunnerSoapUI_LibreplanMutualiseTest(String testCaseName) {
 		this.testCaseName = testCaseName;
